@@ -1,0 +1,149 @@
+[
+  {
+    "name": "Peer-to-Peer Transfer",
+    "description": "Money sent directly to individuals, friends, or family through bank transfer, P2P apps, or remittance services.",
+    "icon": "👤",
+    "type": "expense",
+    "regex": "(IFO|TRANSFER|P2P|SEND|TO)\\s+[A-Z0-9 ]+"
+  },
+  {
+    "name": "Business Payment",
+    "description": "Payments made to businesses or merchants for goods and services, excluding subscriptions and utilities.",
+    "icon": "🏢",
+    "type": "expense",
+    "regex": "(POS|WEB|PAYMENT|STORE|MERCHANT|SHOP|ONLINE)\\s+[@A-Z0-9_-]+"
+  },
+  {
+    "name": "Subscriptions",
+    "description": "Recurring payments to digital services like music, video streaming, SaaS tools, or online memberships.",
+    "icon": "📺",
+    "type": "expense",
+    "regex": "(SPOTIFY|NETFLIX|APPLE|MICROSOFT|GOOGLE|YOUTUBE|DISNEY|SUBSCRIPTION|PLAN|PREMIUM)"
+  },
+  {
+    "name": "Entertainment & Leisure",
+    "description": "Expenses for movies, games, events, nightlife, or recreational activities.",
+    "icon": "🎮",
+    "type": "expense",
+    "regex": "(MOVIE|CINEMA|CLUB|TICKET|EVENT|GAME|PLAYSTATION|STEAM)"
+  },
+  {
+    "name": "Mobile & Internet",
+    "description": "Payments for mobile top-ups, internet data, broadband, or telecom services.",
+    "icon": "📱",
+    "type": "expense",
+    "regex": "(MTN|AIRTEL|GLO|9MOBILE|VODAFONE|SAFARICOM|TELKOM|RECHARGE|DATA|TOP\\s?UP|BUNDLE)"
+  },
+  {
+    "name": "Utilities",
+    "description": "Payments for electricity, water, gas, or similar household services.",
+    "icon": "💡",
+    "type": "expense",
+    "regex": "(ELECTRIC|POWER|UTILITY|WATER|GAS|BILL|NEPA|KES|KPLC)"
+  },
+  {
+    "name": "Groceries",
+    "description": "Purchases from supermarkets, convenience stores, or grocery delivery apps.",
+    "icon": "🛒",
+    "type": "expense",
+    "regex": "(SUPERMARKET|GROCERY|SHOPRITE|MARKET|DELIVERY|FOODCO|SUPERMART)"
+  },
+  {
+    "name": "Retail & E-commerce",
+    "description": "Purchases from physical or online retail stores (clothing, electronics, general shopping).",
+    "icon": "🛍️",
+    "type": "expense",
+    "regex": "(JUMIA|AMAZON|ALIEXPRESS|SHEIN|EBAY|SHOP|STORE|BOUTIQUE|FASHION)"
+  },
+  {
+    "name": "Dining & Food Delivery",
+    "description": "Restaurant payments, cafés, takeaways, or online food delivery services.",
+    "icon": "🍔",
+    "type": "expense",
+    "regex": "(EAT|CAFE|FOOD|RESTAURANT|DELIVERY|UBER\\s?EATS|JUMIA\\s?FOOD|DOORDASH|GLOVO)"
+  },
+  {
+    "name": "Transport",
+    "description": "Expenses on taxis, ride-hailing apps, buses, trains, or other local commuting.",
+    "icon": "🚕",
+    "type": "expense",
+    "regex": "(UBER|BOLT|TAXI|BUS|TRAIN|FARE|RIDE)"
+  },
+  {
+    "name": "Fuel & Auto",
+    "description": "Spending on fuel, car maintenance, parking, or tolls.",
+    "icon": "⛽",
+    "type": "expense",
+    "regex": "(FILLING\\s?STATION|FUEL|PETROL|OIL|AUTO|CAR|SERVICE|LUBRICANT|MECHANIC)"
+  },
+  {
+    "name": "Travel",
+    "description": "Flights, hotels, travel agencies, or vacation-related expenses.",
+    "icon": "✈️",
+    "type": "expense",
+    "regex": "(FLIGHT|AIRWAYS|HOTEL|BOOKING|AGENCY|TRIP|VACATION|TRAVEL)"
+  },
+  {
+    "name": "Bank Charges",
+    "description": "Service fees, maintenance charges, ATM fees, or other bank-related deductions.",
+    "icon": "🏦",
+    "type": "expense",
+    "regex": "(CHARGE|FEE|MAINTENANCE|ATM\\s?FEE|VAT|BANK\\s?FEE)"
+  },
+  {
+    "name": "Currency Conversion",
+    "description": "Debits from converting funds between currencies (FX transactions).",
+    "icon": "💱",
+    "type": "expense",
+    "regex": "(FX|FOREX|CONVERSION|USD|GBP|EUR|EXCHANGE)"
+  },
+  {
+    "name": "Salary & Wages",
+    "description": "Credits from salary, wages, or contract payments.",
+    "icon": "💼",
+    "type": "income",
+    "regex": "(SALARY|PAYROLL|WAGES|HRPAY|INCOME|PAYMENT\\s?FROM|COMPENSATION)"
+  },
+  {
+    "name": "Refunds & Reimbursements",
+    "description": "Credits from refunds, cashback, or business reimbursements.",
+    "icon": "↩️",
+    "type": "income",
+    "regex": "(REFUND|REVERSAL|CASHBACK|REV|REIMBURSE)"
+  },
+  {
+    "name": "Healthcare",
+    "description": "Payments for hospitals, pharmacies, medical bills, or insurance.",
+    "icon": "🏥",
+    "type": "expense",
+    "regex": "(HOSPITAL|PHARMACY|MEDICAL|CLINIC|HEALTH|INSURANCE|NHIS)"
+  },
+  {
+    "name": "Education",
+    "description": "Tuition fees, online courses, learning materials, or academic services.",
+    "icon": "🎓",
+    "type": "expense",
+    "regex": "(SCHOOL|TUITION|COURSE|EDU|ACADEMY|E-LEARNING|TRAINING|BOOK)"
+  },
+  {
+    "name": "Charity & Donations",
+    "description": "Payments to charities, NGOs, religious contributions, or crowdfunding.",
+    "icon": "🙏",
+    "type": "expense",
+    "regex": "(CHURCH|MOSQUE|CHARITY|DONATION|TITHE|FOUNDATION|NGO)"
+  },
+  {
+    "name": "Cash Withdrawal",
+    "description": "ATM withdrawals or cash taken directly from bank branches.",
+    "icon": "💵",
+    "type": "expense",
+    "regex": "(ATM|CASH\\s?WITHDRAWAL|BRANCH)"
+  },
+  {
+    "name": "Uncategorized",
+    "description": "Transactions that do not fit into any predefined category or require manual review.",
+    "icon": "❓",
+    "type": "expense",
+    "regex": null
+  }
+]
