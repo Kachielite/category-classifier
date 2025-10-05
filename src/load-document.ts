@@ -3,7 +3,7 @@ import path from "path";
 import { Document } from "@langchain/core/documents";
 
 export class LoadDocument {
-  private filePath: string;
+  private readonly filePath: string;
 
   constructor(file: string) {
     this.filePath = path.resolve(file);
@@ -18,7 +18,7 @@ export class LoadDocument {
     }
 
     const docs = data.map((category) => {
-      // full JSON as string for embedding
+      // full JSON as a string for embedding
       const content = JSON.stringify(category, null, 2);
 
       return new Document({
