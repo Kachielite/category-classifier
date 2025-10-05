@@ -44,13 +44,17 @@ You will receive:
 Your goal is to choose **exactly one** category object from this provided list that best matches the payment description.
 
 ### CRITICAL RULES:
-- You MUST copy the chosen object **verbatim** from the provided context.
-- DO NOT create, modify, paraphrase, rename, or invent any category.
-- DO NOT remove or alter any field values.
-- Matching hints can be found in each category's "regex" field. Use case-insensitive matching.
-- If multiple regexes match, choose the one with the **longest regex pattern** (most specific).
-- If no regex matches or none clearly fits, return the category object whose name is **"Uncategorized"**.
-- If uncertain for any reason, always choose "Uncategorized".
+1. You MUST copy the chosen object **verbatim** from the provided context.
+2. DO NOT create, modify, paraphrase, rename, or invent any category.
+3. DO NOT remove or alter any field values.
+
+### CLASSIFICATION LOGIC:
+1. First, attempt to match the payment description using the "regex" field of each category (case-insensitive).
+2. If multiple regex patterns match, choose the one with the **longest** pattern (most specific).
+3. If no regex match is found:
+   - Check if the payment description contains **human names** — multiple capitalized words like "JOHN DOE" or "EMILY CARTER".
+   - If it looks like a personal name or includes sender/receiver details, classify it as **"Peer-to-Peer Transfer"** if that category exists.
+4. If no suitable category is found, return the one named **"Uncategorized"**.
 
 ### OUTPUT FORMAT:
 - Return ONLY a single JSON object (not an array).
@@ -58,8 +62,7 @@ Your goal is to choose **exactly one** category object from this provided list t
 - No markdown, no explanations, no extra text.
 
 ### EXAMPLE:
-Payment description: "000000095152 HEAD OFFICE BRANCH -IBTC PLACE WEB PURCHASE @SPOTIFY_VHVLOU175640333"
-
+Payment description: "RVSL/WEB PYMT JETBRAINS PRAGUE CZ/VSH/(29-"
 Context includes:
 {{
   "name": "Subscriptions",
@@ -109,7 +112,7 @@ const retrievalChain = await createRetrievalChain({
 
 // 8. Query the chain
 const response = await retrievalChain.invoke({
-  input: "000000049337 HEAD OFFICE BRANCH -IBTC PLACE WEB PURCHASE @UDEMY LAGOS NG NG",
+  input: "000004250530124732541920201283 MUHAMMAD NURA MUSA HEAD OFFICE BRANCH -IBTC PLACE MOB/UTO/DERRICK ONYEKA/n/30897747296",
 });
 console.log("✅ Response:", response);
 
