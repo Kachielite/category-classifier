@@ -4,7 +4,7 @@
     "description": "Money sent directly to individuals, friends, or family through bank transfer, P2P apps, or remittance services.",
     "icon": "👤",
     "type": "expense",
-    "regex": "(IFO|TRANSFER|P2P|SEND|TO|TRF//FRM)\\s+[A-Z0-9 ]+"
+    "regex": "(IFO|TRANSFER|P2P|SEND|TO|TRF//FRM|BENEFICIARY|REVERSAL|REVSL|MOBILE\\s?MONEY|PERSONAL\\s?TRANSFER|PAYMENT\\s?TO|[A-Z]{2,}\\s+[A-Z]{2,}(\\s+[A-Z]{2,})?)"
   },
   {
     "name": "Business Payment",
@@ -102,7 +102,7 @@
     "description": "Credits from salary, wages, or contract payments.",
     "icon": "💼",
     "type": "income",
-    "regex": "(SALARY|PAYROLL|WAGES|HRPAY|INCOME|PAYMENT\\s?FROM|COMPENSATION)"
+    "regex": "(SALARY|PAYROLL|WAGES|HRPAY|INCOME|PAYMENT\\s?FROM|COMPENSATION|TAPPI)"
   },
   {
     "name": "Refunds & Reimbursements",

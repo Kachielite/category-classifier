@@ -112,7 +112,7 @@ const retrievalChain = await createRetrievalChain({
 
 // 8. Query the chain
 const response = await retrievalChain.invoke({
-  input: "000004250530124732541920201283 MUHAMMAD NURA MUSA HEAD OFFICE BRANCH -IBTC PLACE MOB/UTO/DERRICK ONYEKA/n/30897747296",
+  input: "ALS2161135274JS_Tappi Inc.",
 });
 console.log("✅ Response:", response);
 
