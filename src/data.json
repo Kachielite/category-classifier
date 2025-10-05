@@ -4,7 +4,7 @@
     "description": "Money sent directly to individuals, friends, or family through bank transfer, P2P apps, or remittance services.",
     "icon": "👤",
     "type": "expense",
-    "regex": "(IFO|TRANSFER|P2P|SEND|TO)\\s+[A-Z0-9 ]+"
+    "regex": "(IFO|TRANSFER|P2P|SEND|TO|TRF//FRM)\\s+[A-Z0-9 ]+"
   },
   {
     "name": "Business Payment",
@@ -18,7 +18,7 @@
     "description": "Recurring payments to digital services like music, video streaming, SaaS tools, or online memberships.",
     "icon": "📺",
     "type": "expense",
-    "regex": "(SPOTIFY|NETFLIX|APPLE|MICROSOFT|GOOGLE|YOUTUBE|DISNEY|SUBSCRIPTION|PLAN|PREMIUM)"
+    "regex": "(SPOTIFY|NETFLIX|APPLE|MICROSOFT|GOOGLE|YOUTUBE|DISNEY|SUBSCRIPTION|PLAN|PREMIUM|JETBRAINS|GITHUB)"
   },
   {
     "name": "Entertainment & Leisure",
@@ -46,7 +46,7 @@
     "description": "Purchases from supermarkets, convenience stores, or grocery delivery apps.",
     "icon": "🛒",
     "type": "expense",
-    "regex": "(SUPERMARKET|GROCERY|SHOPRITE|MARKET|DELIVERY|FOODCO|SUPERMART)"
+    "regex": "(SUPERMARKET|GROCERY|SHOPRITE|MARKET|DELIVERY|FOODCO|SUPERMART|GLOVO)"
   },
   {
     "name": "Retail & E-commerce",
@@ -85,7 +85,7 @@
   },
   {
     "name": "Bank Charges",
-    "description": "Service fees, maintenance charges, ATM fees, or other bank-related deductions.",
+    "description": "Service fees, maintenance charges, card maintenance, ATM fees, or other bank-related deductions.",
     "icon": "🏦",
     "type": "expense",
     "regex": "(CHARGE|FEE|MAINTENANCE|ATM\\s?FEE|VAT|BANK\\s?FEE)"
