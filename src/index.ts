@@ -102,13 +102,13 @@ const llm = new ChatOpenAI({
 const documentChain = await createStuffDocumentsChain({
   llm,
   prompt,
-});
-
-// 7. Retrieval chain (UNCHANGED)
-const retrievalChain = await createRetrievalChain({
+});const retrievalChain = await createRetrievalChain({
   retriever,
   combineDocsChain: documentChain,
 });
+
+// 7. Retrieval chain (UNCHANGED)
+
 
 // 8. Query the chain
 const response = await retrievalChain.invoke({
